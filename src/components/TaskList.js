@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-const TaskList = () => {
+const TaskList = ({ list }) => {
   const tasks = useSelector((state) => state.tasks);
 
   const taskList = tasks.map((task) => (
