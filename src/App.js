@@ -1,13 +1,13 @@
 import "./App.css";
 import TaskForm from "./components/TaskForm";
-import TasksList from "./components/TasksList";
+import TaskList from "./components/TaskList";
 
 function App() {
   return (
     <div className="App">
       <h1>To Do List</h1>
       <TaskForm />
-      <TasksList />
+      <TaskList />
     </div>
   );
 }

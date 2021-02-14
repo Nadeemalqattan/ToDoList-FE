@@ -55,10 +55,10 @@ const TaskForm = () => {
       <div class="form-group">
         <label>Deadline Date</label>
         <input
-          type="date"
-          id="start"
-          name="data"
+          type="text"
           className="form-control"
+          name="date"
+          placeholder="mm/dd/year"
           onChange={handleChange}
         />
       </div>

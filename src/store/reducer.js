@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TASK:
       const { newTask } = action.payload;
-      state.task.length === 0
+      state.tasks.length === 0
         ? (newTask.id = 1)
         : (newTask.id = state.tasks[state.tasks.length - 1].id + 1);
       newTask.list = "unfinished";
