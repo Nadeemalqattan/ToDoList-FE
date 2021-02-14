@@ -1,12 +1,16 @@
-import tasksData from "../tasks";
-import { ADD_TASK, DELETE_TASK, UPDATE_TASK } from "./actions";
+import { ADD_TASK, DELETE_TASK, UPDATE_TASK, FETCH_TASKS } from "./actions";
 
 const initialState = {
-  tasks: tasksData,
+  tasks: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_TASKS:
+      return {
+        ...state,
+        tasks: action.payload,
+      };
     case ADD_TASK:
       const { newTask } = action.payload;
       state.tasks.length === 0

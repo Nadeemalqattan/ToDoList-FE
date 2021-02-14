@@ -1,17 +1,13 @@
-import { useSelector } from "react-redux";
+import Task from "./Task";
 
 const TaskList = ({ list }) => {
-  const tasks = useSelector((state) => state.tasks);
-
-  const taskList = tasks.map((task) => (
-    <div key={task.id}>
-      <h3>{task.name}</h3>
-      <h3>{task.status}</h3>
-      <h3>{task.priority}</h3>
-      <h3>{task.date}</h3>
-    </div>
-  ));
-  return <div>{taskList}</div>;
+  return (
+    <>
+      {list.map((task) => {
+        return <Task key={task.id} task={task} />;
+      })}
+    </>
+  );
 };
 
 export default TaskList;

@@ -43,7 +43,7 @@ const TaskForm = () => {
         />
       </div>
       <div class="form-group">
-        <label>Example select</label>
+        <label>Priority</label>
         <input
           type="text"
           className="form-control"
@@ -52,15 +52,30 @@ const TaskForm = () => {
           onChange={handleChange}
         />
       </div>
-      <div class="form-group">
-        <label>Deadline Date</label>
-        <input
+      {/* <div class="form-group">
+        <label>Deadline Date</label> */}
+      <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label">
+          Date
+        </label>
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="date"
+            id="example-date-input"
+            name="deadline"
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* </div> */}
+        {/* <input
           type="text"
           className="form-control"
           name="date"
           placeholder="mm/dd/year"
           onChange={handleChange}
-        />
+        /> */}
       </div>
       <div className="input-group-append">
         <button className="btn btn-outline-secondary" type="submit">
